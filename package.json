@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauralexis/lauralexis.github.io.git"
+  },
+  "author": "Laura Weiner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauralexis/lauralexis.github.io/issues"
+  },
+  "homepage": "https://github.com/lauralexis/lauralexis.github.io#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
