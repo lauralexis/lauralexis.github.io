@@ -67,8 +67,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-alert('hot-loaded!');
-
+throw new Error("Module parse failed: Unexpected token (2:22)\nYou may need an appropriate loader to handle this file type.\n| 'use strict';\n| var angular = require 'angular'\n| \n| angular.module('styleguide', [");
 
 /***/ })
 /******/ ]);
