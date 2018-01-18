@@ -17,15 +17,15 @@
 @mixin display-2 {
   @include prox(
     $weight: 300,
-    $size: 32px,
-    $line-height: 42px
+    $size: 22px,
+    $line-height: 29px
   );
 
-  @include MQ(XS) {
+  @include MQ(M) {
     @include prox(
       $weight: 300,
-      $size: 22px,
-      $line-height: 29px
+      $size: 32px,
+      $line-height: 42px
     );
   }
 }
