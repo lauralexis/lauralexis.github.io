@@ -1,0 +1,29 @@
+@function prox-family() { @return 'proxima-nova', 'Proxima Nova', sans-serif; }
+
+@mixin prox($weight: 400, $size: 16px, $line-height: $size) {
+  @if unitless($size) { $size: $size + px; }
+  @if unitless($line-height) { $line-height: $line-height + px; }
+
+  font-family: prox-family();
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin prox-cap($size: 12px, $line-height: $size, $weight: 600) {
+  @include prox($weight, $size, $line-height);
+  letter-spacing: $size / 24 + 1;
+  text-transform: uppercase;
+}
+
+@mixin link {
+  font-weight: 600;
+  transition: smooth() 200ms;
+  color: blue-3();
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: lighten(blue-3(), 5%);
+  }
+}

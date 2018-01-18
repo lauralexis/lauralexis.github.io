@@ -1,0 +1,59 @@
+h1 {
+  @include header-1;
+  margin: .67em 0;
+}
+
+h2 {
+  @include header-2;
+  margin: .83em 0;
+}
+
+h3 {
+  @include header-3;
+  margin: 1em 0;
+}
+
+p {
+  @include paragraph;
+  margin: 1em 0;
+
+  &.text-md { @include paragraph-md; }
+  &.text-sm { @include paragraph-sm; }
+  &.text-xs { @include paragraph-xs; }
+}
+
+.display-1 {
+  @include display-1;
+}
+
+.display-2 {
+  @include display-2;
+}
+
+.display-3 {
+  @include display-3;
+}
+
+.display-4 {
+  @include display-4;
+}
+
+.action-1 {
+  @include action-1;
+}
+
+.action-2 {
+  @include action-2;
+}
+
+a {
+  @include link;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}

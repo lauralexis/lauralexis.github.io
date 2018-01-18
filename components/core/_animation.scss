@@ -1,0 +1,13 @@
+@function smooth() { @return cubic-bezier(.62, .28, .23, .99); }
+@function elastic() { @return cubic-bezier(1, .01, .62, .98); }
+
+@mixin stroke-dash($length: 1000) {
+  stroke-dasharray: $length;
+  stroke-dashoffset: $length;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

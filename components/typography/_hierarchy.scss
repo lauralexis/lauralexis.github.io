@@ -1,0 +1,104 @@
+@mixin display-1 {
+  @include prox(
+    $weight: 300,
+    $size: 36px,
+    $line-height: 48px
+  );
+
+  small {
+    @include prox(
+      $weight: 400,
+      $size: 18px,
+      $line-height: 48px
+    );
+  }
+}
+
+@mixin display-2 {
+  @include prox(
+    $weight: 300,
+    $size: 32px,
+    $line-height: 42px
+  );
+}
+
+@mixin display-3 {
+  @include prox-cap(
+    $size: 22px,
+    $line-height: 29px
+  );
+}
+
+@mixin display-4 {
+  @include prox-cap(
+    $size: 12px,
+    $line-height: 18px
+  );
+}
+
+@mixin header-1 {
+  @include prox(
+    $weight: 600,
+    $size: 30px,
+    $line-height: 40px
+  );
+}
+
+@mixin header-2 {
+  @include prox(
+    $weight: 600,
+    $size: 22px,
+    $line-height: 29px
+  );
+}
+
+@mixin header-3 {
+  @include prox(
+    $weight: 600,
+    $size: 18px,
+    $line-height: 26px
+  );
+}
+
+@mixin paragraph {
+  @include prox(
+    $size: 18px,
+    $line-height: 26px
+  );
+}
+
+@mixin paragraph-md {
+  @include prox(
+    $size: 16px,
+    $line-height: 23px
+  );
+}
+
+@mixin paragraph-sm {
+  @include prox(
+    $size: 15px,
+    $line-height: 22.5px
+  );
+}
+
+@mixin paragraph-xs {
+  @include prox(
+    $size: 14px,
+    $line-height: 20px
+  );
+  color: gray-5();
+}
+
+@mixin action-1 {
+  @include prox-cap(
+    $size: 14px
+  );
+  @include link;
+}
+
+@mixin action-2 {
+  @include prox-cap(
+    $size: 12px
+  );
+  @include link;
+}

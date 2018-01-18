@@ -1,0 +1,4 @@
+@function shadow-1 { @return 0 0 20px rgba(black(), .05); }
+@function shadow-2 { @return 0 0 25px rgba(black(), .1); }
+@function shadow-3 { @return 0 0 30px rgba(black(), .2); }
+@function shadow-4 { @return 0 0 30px rgba(black(), .333); }

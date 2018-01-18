@@ -1,0 +1,4 @@
+@function border-transparent() { @return solid 1px transparent; }
+@function border() { @return solid 1px gray-2(); }
+@function border-dark() { @return solid 1px gray-4(); }
+@function border-blue() { @return solid 1px rgba(blue-3(), .5); }

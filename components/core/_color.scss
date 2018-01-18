@@ -1,0 +1,34 @@
+@function red-1()      { @return rgba(231, 76 , 60 , 1); } // #E743C3  hsl(5.6  , 78.1%, 57.1%)
+@function red-2()      { @return rgba(196, 64 , 50 , 1); } // #C44032  hsl(5.8  , 59.3%, 48.2%)
+
+@function orange-1()   { @return rgba(251, 134, 63 , 1); } // #FB863F  hsl(22.7 , 95.9%, 61.6%)
+@function orange-2()   { @return rgba(245, 91 , 35 , 1); } // #F55B2E  hsl(16   , 91.3%, 54.9%)
+
+@function yellow-1()   { @return rgba(247, 166, 0  , 1); } // #F7A600  hsl(40.3 , 100% , 48.4%)
+
+@function green-1()    { @return rgba(198, 238, 229, 1); } // #C6EEE5  hsl(166.5, 54.1%, 85.5%)
+@function green-2()    { @return rgba(140, 221, 202, 1); } // #8CDDCA  hsl(165.9, 54.4%, 70.8%)
+@function green-3()    { @return rgba(26 , 188, 150, 1); } // #1ABC96  hsl(165.9, 75.7%, 42.0%)
+@function green-4()    { @return rgba(21 , 160, 133, 1); } // #15A085  hsl(168.3, 76.8%, 35.5%)
+
+@function blue-1()     { @return rgba(139, 200, 241, 1); } // #8BC8F1  hsl(204.1, 78.5%, 74.5%)
+@function blue-2()     { @return rgba(60 , 156, 221, 1); } // #3C9CDD  hsl(204.2, 70.3%, 55.1%)
+@function blue-3()     { @return rgba(25 , 131, 202, 1); } // #1983CA  hsl(204.1, 78.0%, 44.5%)
+@function blue-4()     { @return rgba(19 , 102, 157, 1); } // #13669D  hsl(203.9, 78.4%, 34.5%)
+
+@function midnight-1() { @return rgba(77 , 101, 128, 1); } // #4D6580  hsl(211.8, 24.9%, 40.2%)
+@function midnight-2() { @return rgba(47 , 70 , 95 , 1); } // #2F465F  hsl(211.2, 33.8%, 27.8%)
+@function midnight-3() { @return rgba(30 , 45 , 61 , 1); } // #1E2D3D  hsl(211  , 34.1%, 17.8%)
+
+@function purple-1()   { @return rgba(148, 107, 173, 1); } // #946BAD  hsl(277.3, 28.7%, 54.9%)
+
+@function gray-0()     { @return rgba(249, 249, 249, 1); } // #F9F9F9  hsl(0    , 0%   , 97.6%)
+@function gray-1()     { @return rgba(245, 245, 245, 1); } // #F5F5F5  hsl(0    , 0%   , 96.1%)
+@function gray-2()     { @return rgba(227, 227, 227, 1); } // #E3E3E3  hsl(0    , 0%   , 89.0%)
+@function gray-3()     { @return rgba(204, 204, 204, 1); } // #CCCCCC  hsl(0    , 0%   , 80.0%)
+@function gray-4()     { @return rgba(165, 165, 165, 1); } // #A5A5A5  hsl(0    , 0%   , 64.7%)
+@function gray-5()     { @return rgba(136, 136, 136, 1); } // #888888  hsl(0    , 0%   , 53.3%)
+@function gray-6()     { @return rgba(74 , 74 , 74 , 1); } // #4A4A4A  hsl(0    , 0%   , 29.0%)
+
+@function white()      { @return rgba(255, 255, 255, 1); } // #FFFFFF  hsl(0    , 0%   , 100%)
+@function black()      { @return rgba(0  , 0  , 0  , 1); } // #000000  hsl(0    , 0%   , 0%  )

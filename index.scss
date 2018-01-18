@@ -1,3 +1,18 @@
+@import './components/core/';
+@import './components/typography/';
+
+@import './components/avatar/';
+@import './components/cards/';
+@import './components/checkboxes/';
+@import './components/illustration/';
+@import './components/infotips/';
+@import './components/loaders/';
+@import './components/menus/';
+@import './components/radiobuttons/';
+@import './components/selectmenus/';
+@import './components/tables/';
+@import './components/textfields/';
+
 $gray-1: #FAFAFA;
 
 body {
