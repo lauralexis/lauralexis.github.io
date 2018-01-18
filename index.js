@@ -34,6 +34,10 @@ angular.module('styleguide', [
       template: require('./app/color.jade'),
       controller: 'ColorController'
     })
+    .when('/illustration', {
+      title: 'Illustration',
+      template: require('./app/illustration.jade')
+    })
     .when('/infotips', {
       title: 'Infotips',
       template: require('./app/infotips.jade')
