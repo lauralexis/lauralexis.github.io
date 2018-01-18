@@ -10,7 +10,7 @@ angular.module('styleguide', [
   require('angular-messages')
 ])
 
-.config( ($locationProvider, $routeProvider) => {
+.config( ($routeProvider) => {
   $routeProvider
     .when('/', {
       title: 'Styleguide',
@@ -69,6 +69,9 @@ angular.module('styleguide', [
     .when('/typography', {
       title: 'Typography',
       template: require('./app/typography.jade')
+    })
+    .otherwise({
+      redirectTo: "/"
     });
 })
 // .directive('infotip', require('../tools/infotip/infotip.coffee'))
