@@ -1,79 +1,76 @@
 const angular = require ('angular');
 require ('./index.scss');
+require ('angular-material/angular-material.scss');
 
 angular.module('styleguide', [
-  require('angular-route')
-  // require('angular-material'),
-  // require('angular-aria'),
-  // require('angular-animate'),
-  // require('angular-messages')
+  require('angular-route'),
+  require('angular-material'),
+  require('angular-aria'),
+  require('angular-animate'),
+  require('angular-messages')
 ])
 
 .config( ($locationProvider, $routeProvider) => {
-  $locationProvider.html5Mode({
-  enabled: true,
-  requireBase: false
-  });
-  return $routeProvider.when('/', {
-    title: 'Styleguide',
-    template: require('./app/overview.jade'),
-    controller: 'StyleguideController'
-  });
-  // .when('/styleguide/avatar', {
-  //   title: 'Avatar',
-  //   template: require('./styleguide-components/avatar.jade')
-  // })
-  // .when('/styleguide/checkboxes', {
-  //   title: 'Checkboxes',
-  //   template: require('./styleguide-components/checkboxes.jade'),
-  //   controller: 'CheckboxesController'
-  // })
-  // .when('/styleguide/error-patterns', {
-  //   title: 'Error patterns',
-  //   template: require('./styleguide-components/error-patterns.jade'),
-  //   controller: 'ErrorPatternsController'
-  // })
-  // .when('/styleguide/icons', {
-  //   title: 'Icons',
-  //   template: require('./styleguide-components/icons.jade'),
-  //   controller: 'IconsController'
-  // })
-  // .when('/styleguide/infotips', {
-  //   title: 'Infotips',
-  //   template: require('./styleguide-components/infotips.jade')
-  // })
-  // .when('/styleguide/loaders', {
-  //   title: 'Loaders',
-  //   template: require('./styleguide-components/loaders.jade')
-  // })
-  // .when('/styleguide/modals', {
-  //   title: 'Modals',
-  //   template: require('./styleguide-components/modals.jade'),
-  //   controller: 'ModalsController'
-  // })
-  // .when('/styleguide/radio-buttons', {
-  //   title: 'Radio buttons',
-  //   template: require('./styleguide-components/radio-buttons.jade')
-  // })
-  // .when('/styleguide/select-menus', {
-  //   title: 'Select menus',
-  //   template: require('./styleguide-components/select-menus.jade'),
-  //   controller: 'SelectMenusController'
-  // })
-  // .when('/styleguide/tables', {
-  //   title: 'Tables',
-  //   template: require('./styleguide-components/tables.jade'),
-  //   controller: 'TablesController'
-  // })
-  // .when('/styleguide/text-fields', {
-  //   title: 'Text fields',
-  //   template: require('./styleguide-components/text-fields.jade'),
-  //   controller: 'TextFieldsController'
-  // })
-  // .when('/styleguide/typography', {
-  //   title: 'Typography',
-  //   template: require('./styleguide-components/typography.jade')
-  // });
+  $locationProvider.html5Mode({enabled: true});
+  $routeProvider
+    .when('/', {
+      title: 'Styleguide',
+      template: require('./app/overview.jade'),
+      controller: 'StyleguideController'
+    })
+    .when('/avatar', {
+      title: 'Avatar',
+      template: require('./app/avatar.jade')
+    })
+    .when('/cards', {
+      title: 'Cards',
+      template: require('./app/cards.jade')
+    })
+    .when('/checkboxes', {
+      title: 'Checkboxes',
+      template: require('./app/checkboxes.jade'),
+      controller: 'CheckboxesController'
+    })
+    .when('/color', {
+      title: 'Color',
+      template: require('./app/color.jade'),
+      controller: 'ColorController'
+    })
+    .when('/infotips', {
+      title: 'Infotips',
+      template: require('./app/infotips.jade')
+    })
+    .when('/loaders', {
+      title: 'Loaders',
+      template: require('./app/loaders.jade')
+    })
+    .when('/menus', {
+      title: 'Menus',
+      template: require('./app/menus.jade')
+    })
+    .when('/radio-buttons', {
+      title: 'Radio buttons',
+      template: require('./app/radio-buttons.jade')
+    })
+    .when('/select-menus', {
+      title: 'Select menus',
+      template: require('./app/select-menus.jade'),
+      controller: 'SelectMenusController'
+    })
+    .when('/tables', {
+      title: 'Tables',
+      template: require('./app/tables.jade'),
+      controller: 'TablesController'
+    })
+    .when('/text-fields', {
+      title: 'Text fields',
+      template: require('./app/text-fields.jade'),
+      controller: 'TextFieldsController'
+    })
+    .when('/typography', {
+      title: 'Typography',
+      template: require('./app/typography.jade')
+    });
 })
 // .directive('infotip', require('../tools/infotip/infotip.coffee'))
 // .directive('icon', require('../tools/icon/icon.coffee'))
@@ -142,25 +139,6 @@ angular.module('styleguide', [
 //     return str.replace(/^icon-/g, '').replace(/^icon/g, 'none');
 //   });
 // })
-// .controller('ModalsController', function($scope, ModalService) {
-//   $scope.showModal_1 = function() {
-//     return ModalService.showModal({
-//       template: (require('./styleguide-components/modals/variations/financial-plans-template.jade'))(null),
-//       controller: 'ModalController'
-//     });
-//   };
-//   return $scope.showModal_2 = function() {
-//     return ModalService.showModal({
-//       template: (require('./styleguide-components/modals/variations/financial-plans-readonly-template.jade'))(null),
-//       controller: 'ModalController'
-//     });
-//   };
-// })
-// .controller('ModalController', function($scope, close) {
-//   return $scope.close = function() {
-//     return close(true);
-//   };
-// })
 // .controller('TablesController', function($scope) {
 //   return $scope.entries = [
 //     {
@@ -207,16 +185,4 @@ angular.module('styleguide', [
 //   $scope.email = 'laura@gust.com';
 //   $scope.invalidSsn = 'XYJBZ';
 //   return $scope.errorEmail = 'blargh@gust.net';
-// })
-// .controller('ErrorPatternsController', function($scope) {
-//   $scope.inFocus1 = false;
-//   return $scope.showHints = function(errors, touched) {
-//     if (errors.required && touched) {
-//       return false;
-//     } else if (Object.keys(errors).length > 0 && !errors.required) {
-//       return false;
-//     } else {
-//       return true;
-//     }
-//   };
 // })
