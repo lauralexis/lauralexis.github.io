@@ -11,7 +11,6 @@ angular.module('styleguide', [
 ])
 
 .config( ($locationProvider, $routeProvider) => {
-  $locationProvider.html5Mode({enabled: true, requireBase: false});
   $routeProvider
     .when('/', {
       title: 'Styleguide',

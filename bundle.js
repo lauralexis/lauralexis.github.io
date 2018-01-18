@@ -803,7 +803,7 @@ __webpack_require__(8);
 __webpack_require__(11);
 
 angular.module('styleguide', [__webpack_require__(13), __webpack_require__(15), __webpack_require__(5), __webpack_require__(4), __webpack_require__(19)]).config(($locationProvider, $routeProvider) => {
-  $locationProvider.html5Mode({ enabled: true });
+  $locationProvider.html5Mode({ enabled: true, requireBase: false });
   $routeProvider.when('/', {
     title: 'Styleguide',
     template: __webpack_require__(21),
