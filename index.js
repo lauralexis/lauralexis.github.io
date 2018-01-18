@@ -12,10 +12,9 @@ angular.module('styleguide', [
 
 .config( ($routeProvider) => {
   $routeProvider
-    .when('/', {
+    .when('/styleguide', {
       title: 'Styleguide',
-      template: require('./app/overview.jade'),
-      controller: 'StyleguideController'
+      template: require('./app/overview.jade')
     })
     .when('/avatar', {
       title: 'Avatar',
@@ -71,7 +70,7 @@ angular.module('styleguide', [
       template: require('./app/typography.jade')
     })
     .otherwise({
-      redirectTo: "/"
+      redirectTo: "/styleguide"
     });
 })
 // .directive('infotip', require('../tools/infotip/infotip.coffee'))
@@ -79,38 +78,18 @@ angular.module('styleguide', [
 // .directive('indeterminate', require('../tools/checkbox/indeterminate.coffee'))
 // .directive('copyToClipboard', require('../tools/copy-to-clipboard/copy-to-clipboard.coffee'))
 // .directive('referralLink', require('../tools/referral-link/referral-link.coffee'))
-// .factory('ComponentDirectorySerive', function($route) {
-//   var components;
-//   components = _.values($route.routes).filter(function(e) {
-//     return e.title;
-//   });
-//   return {
-//     shareComponents: function() {
-//       return components;
-//     }
-//   };
-// })
-.controller('StyleguideController', function($scope, $route, $location) {
-  console.log('styleguide-controller');
-  // var ref;
-  // $scope.activeComponent = (ref = $route.current) != null ? ref.$$route.title : void 0;
-  // $scope.components = _.values($route.routes);
-  // return $scope.go = function(path) {
-  //   return $location.path(path);
-  // };
+.controller('StyleguideController', function($scope, $location, $route) {
+  $scope.components = Object.values($route.routes).filter(e => e.title);
+  $scope.activeComponent = $location.path();
+  $scope.go = function(path) {
+    $location.path(path);
+  };
+  $scope.setComponent = (component) => {
+    $scope.activeComponent = component.title;
+    $location.path(component.originalPath);
+  };
 });
-// .controller('NavController', function($scope, $location, ComponentDirectorySerive) {
-//   $scope.components = ComponentDirectorySerive.shareComponents();
-//   $scope.activeComponent = $location.path();
-//   $scope.go = function(path) {
-//     return $location.path(path);
-//   };
-//   return $scope.setComponent = function(component) {
-//     $scope.activeComponent = component.title;
-//     return $location.path(component.originalPath);
-//   };
-// })
-// .controller('SelectMenusController', function($scope, ComponentDirectorySerive) {
+// .controller('SelectMenusController', function($scope, $route) {
 //   var ADVISOR, ALL, CONTRACTOR;
 //   $scope.components = ComponentDirectorySerive.shareComponents();
 //   ALL = 'all';
