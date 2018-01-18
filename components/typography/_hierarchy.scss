@@ -20,6 +20,14 @@
     $size: 32px,
     $line-height: 42px
   );
+
+  @include MQ(XS) {
+    @include prox(
+      $weight: 300,
+      $size: 22px,
+      $line-height: 29px
+    );
+  }
 }
 
 @mixin display-3 {

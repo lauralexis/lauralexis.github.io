@@ -65,7 +65,7 @@ body {
     width: 250px;
     margin-bottom: 20px;
 
-    @include MQ(L) {
+    @include MQ(M) {
       display: block;
     }
 
@@ -96,7 +96,7 @@ body {
       margin-bottom: 20px;
     }
 
-    @include MQ(L) {
+    @include MQ(M) {
       width: calc(100% - 300px);
       margin-right: 50px;
     }
