@@ -1,3 +1,5 @@
+require('./toolbar.scss');
+
 module.exports = ($route, $location) => {
   return {
     restrict: 'E',
@@ -6,12 +8,12 @@ module.exports = ($route, $location) => {
     link: (scope, elem, attrs) => {
       scope.components = Object.values($route.routes).filter(route => route.title);
       scope.activeComponent = $route.current.$$route.title;
-      scope.go = (originalPath) => {
-        $location.path(originalPath);
+      scope.go = (path) => {
+        $location.path(path);
       };
       scope.setComponent = (component) => {
         scope.activeComponent = component.title;
-        $location.path(component.originalPath);
+        scope.go(component.originalPath);
       };
     }
   };
