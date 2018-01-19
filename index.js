@@ -1,6 +1,6 @@
 const angular = require ('angular');
-require ('./index.scss');
 require ('angular-material/angular-material.scss');
+require ('./index.scss');
 
 angular.module('styleguide', [
   require('angular-route'),

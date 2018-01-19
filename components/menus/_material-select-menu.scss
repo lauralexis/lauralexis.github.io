@@ -1,0 +1,65 @@
+md-select {
+  @include header-2;
+  width: 250px;
+  height: 29px;
+  letter-spacing: 1.5px;
+  margin: 0;
+
+  &:focus {
+    .md-select-icon {
+      background-color: rgba(0, 0, 0, .05);
+    }
+  }
+}
+
+.md-select-value {
+  > span:not(.md-select-icon) {
+    flex-grow: 0;
+  }
+}
+
+md-select-menu {
+  box-shadow: shadow-menu();
+  background: white();
+
+  md-content {
+    margin: 8px;
+
+    md-option {
+      @include paragraph;
+      height: 40px;
+
+      &:not([disabled]):hover,
+      &:not([disabled]):focus {
+        background: lighten(blue-1(), 15%);
+      }
+
+      &[selected],
+      &[selected]:focus,
+      &[selected]:hover {
+        font-weight: 600;
+        color: white();
+        background: blue-2();
+      }
+
+      &[selected]:focus {
+        color: white();
+      }
+    }
+  }
+}
+
+.md-select-value {
+  align-items: flex-start;
+
+  .md-select-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 35 / 2 + px;
+    text-align: center;
+
+    &::after {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.md-open-menu-container {
+  box-shadow: shadow-menu();
+}
+
+md-menu-item {
+  height: auto;
+  min-height: auto;
+
+  .title {
+    @include paragraph-md;
+  }
+
+  .subtitle {
+    @include paragraph-xs;
+  }
+
+  .md-button {
+    padding: 8px 12px;
+    margin: 0 8px;
+
+    &:not([disabled]):hover,
+    &:not([disabled]):focus {
+      background-color: rgba(blue-3(), .07);
+    }
+  }
+
+}
