@@ -77,6 +77,8 @@ angular.module('styleguide', [
       redirectTo: "/styleguide"
     });
 })
+.directive('toolbar', require('./components/toolbar/toolbar.js'))
+.directive('sidenav', require('./components/sidenav/sidenav.js'))
 // .directive('infotip', require('../tools/infotip/infotip.coffee'))
 // .directive('icon', require('../tools/icon/icon.coffee'))
 // .directive('indeterminate', require('../tools/checkbox/indeterminate.coffee'))
