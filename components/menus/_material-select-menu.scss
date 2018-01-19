@@ -19,6 +19,7 @@ md-select {
 }
 
 md-select-menu {
+  border-radius: 5px;
   box-shadow: shadow-menu();
   background: white();
 
@@ -28,6 +29,7 @@ md-select-menu {
     md-option {
       @include paragraph;
       height: 40px;
+      border-radius: 5px;
 
       &:not([disabled]):hover,
       &:not([disabled]):focus {

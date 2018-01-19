@@ -41,33 +41,6 @@ body {
   }
 
 
-  nav {
-    display: none;
-    width: 250px;
-    margin-bottom: 20px;
-
-    @include MQ(M) {
-      display: block;
-    }
-
-    .menu-item {
-      @include paragraph;
-      border-radius: 5px;
-      transition: 300ms smooth();
-      padding: 5px 20px;
-
-      &:hover {
-        background-color: lighten(blue-1(), 15%);
-        cursor: pointer;
-      }
-
-      &.selected {
-        background-color: blue-2();
-        color: white();
-      }
-    }
-  }
-
   .component {
     width: 100%;
 
