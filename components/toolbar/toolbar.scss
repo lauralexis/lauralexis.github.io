@@ -1,0 +1,20 @@
+@import './components/core/';
+
+h1 {
+  padding-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  span {
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  @include MQ(M) {
+    padding-left: 25px;
+  }
+
+  @include MQ(L) {
+    padding-left: 50px;
+  }
+}
