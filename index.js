@@ -26,13 +26,13 @@ angular.module('styleguide', [
     })
     .when('/checkboxes', {
       title: 'Checkboxes',
-      template: require('./app/checkboxes.jade'),
-      controller: 'CheckboxesController'
+      template: require('./app/checkboxes.jade')
+      // controller: 'CheckboxesController'
     })
     .when('/color', {
       title: 'Color',
-      template: require('./app/color.jade'),
-      controller: 'ColorController'
+      template: require('./app/color.jade')
+      // controller: 'ColorController'
     })
     .when('/illustration', {
       title: 'Illustration',
@@ -56,18 +56,18 @@ angular.module('styleguide', [
     })
     .when('/select-menus', {
       title: 'Select menus',
-      template: require('./app/select-menus.jade'),
-      controller: 'SelectMenusController'
+      template: require('./app/select-menus.jade')
+      // controller: 'SelectMenusController'
     })
     .when('/tables', {
       title: 'Tables',
-      template: require('./app/tables.jade'),
-      controller: 'TablesController'
+      template: require('./app/tables.jade')
+      // controller: 'TablesController'
     })
     .when('/text-fields', {
       title: 'Text fields',
-      template: require('./app/text-fields.jade'),
-      controller: 'TextFieldsController'
+      template: require('./app/text-fields.jade')
+      // controller: 'TextFieldsController'
     })
     .when('/typography', {
       title: 'Typography',
@@ -78,23 +78,12 @@ angular.module('styleguide', [
     });
 })
 .directive('toolbar', require('./components/toolbar/toolbar.js'))
-.directive('sidenav', require('./components/sidenav/sidenav.js'))
+.directive('sidenav', require('./components/sidenav/sidenav.js'));
 // .directive('infotip', require('../tools/infotip/infotip.coffee'))
 // .directive('icon', require('../tools/icon/icon.coffee'))
 // .directive('indeterminate', require('../tools/checkbox/indeterminate.coffee'))
 // .directive('copyToClipboard', require('../tools/copy-to-clipboard/copy-to-clipboard.coffee'))
 // .directive('referralLink', require('../tools/referral-link/referral-link.coffee'))
-.controller('StyleguideController', function($scope, $location, $route) {
-  $scope.components = Object.values($route.routes).filter(e => e.title);
-  $scope.activeComponent = $location.path();
-  $scope.go = function(path) {
-    $location.path(path);
-  };
-  $scope.setComponent = (component) => {
-    $scope.activeComponent = component.title;
-    $location.path(component.originalPath);
-  };
-});
 // .controller('SelectMenusController', function($scope, $route) {
 //   var ADVISOR, ALL, CONTRACTOR;
 //   $scope.components = ComponentDirectorySerive.shareComponents();
@@ -114,7 +103,8 @@ angular.module('styleguide', [
 //     }
 //   };
 // })
-// .controller('CheckboxesController', function($scope) {
+// .controller('CheckboxesController', function($scope, $route) {
+//   console.log($route.current.$$route.title)
 //   $scope.isIndeterminate = true;
 //   return $scope.makeIndeterminate = function() {
 //     return $scope.isIndeterminate = !$scope.isIndeterminate;

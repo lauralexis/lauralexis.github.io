@@ -5,20 +5,20 @@
   <title>Portfolio</title>
   <base href="/styleguide">
 </head>
-<body ng-controller="StyleguideController" ng-cloak>
-  <h1 class="display-2">Launch <span>{{activeComponent}}</span></h1>
+<body ng-cloak ng-view>
+  <!-- <h1 class="display-2">Launch <span>{{activeComponent}}</span></h1>
   <md-select class="md-no-underline" aria-label="menu" ng-model="activeComponent" md-selected-text="activeComponent" md-on-close="setComponent(activeComponent)">
     <md-option ng-value="component" ng-repeat="component in components" md-ink-ripple="false">{{component.title}}</md-option>
-  </md-select>
-  <div class="styleguide">
+  </md-select> -->
+  <!-- <div class="styleguide">
     <div ng-view class="component"></div>
-    <nav> 
+    <nav>
       <div class="menu-item"
       ng-repeat="component in components"
       ng-click="setComponent(component)"
       ng-class="{'selected': component.title == activeComponent}"> {{component.title}}</div>
     </nav>
-  </div>
+  </div> -->
 <script src="bundle.js"></script>
 </body>
 </html>
