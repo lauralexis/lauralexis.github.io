@@ -78,18 +78,7 @@ angular.module('styleguide', [
     });
 })
 .directive('toolbar', require('./components/toolbar/toolbar.js'))
-.directive('sidenav', require('./components/sidenav/sidenav.js'))
-.filter('title', () => {
-
-  return (string) => {
-
-    if (typeof string === "string") {
-      return string;
-    } else {
-      return string.title;
-    }
-  };
-});
+.directive('sidenav', require('./components/sidenav/sidenav.js'));
 // .directive('infotip', require('../tools/infotip/infotip.coffee'))
 // .directive('icon', require('../tools/icon/icon.coffee'))
 // .directive('indeterminate', require('../tools/checkbox/indeterminate.coffee'))

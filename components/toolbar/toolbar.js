@@ -6,8 +6,13 @@ module.exports = ($route, $location) => {
     scope: {},
     template: (require('./toolbar.jade'))(null),
     link: (scope, elem, attrs) => {
-      scope.components = Object.values($route.routes).filter(route => route.title);
-      var reformattedArray = scope.components.map((obj) => {
+
+      const components = Object.values($route.routes).filter(route => route.title);
+
+      scope.components = components;
+      var reformattedArray = Object.values($route.routes)
+      .filter(route => route.title)
+      .map((obj) => {
          var rObj = {};
          rObj[obj.title] = obj.originalPath;
          return rObj;
@@ -18,7 +23,10 @@ module.exports = ($route, $location) => {
       };
       scope.setComponent = (componentTitle) => {
         scope.activeComponent = componentTitle;
-        scope.go(reformattedArray[componentTitle].originalPath);
+        var path = reformattedArray.filter(e => {
+          return Object.keys(e).toString() === componentTitle;
+        });
+        scope.go(path[0][componentTitle]);
       };
     }
   };
