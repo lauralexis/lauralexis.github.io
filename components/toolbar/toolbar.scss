@@ -5,16 +5,25 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1.5px;
 
-  span {
+  > span {
+    display: none;
     font-weight: 600;
     text-transform: none;
   }
 
-  @include MQ(M) {
-    padding-left: 25px;
+  md-select {
+    display: inline-block;
+    text-transform: none;
   }
 
-  @include MQ(L) {
-    padding-left: 50px;
+  @include MQ(M) {
+
+    span {
+      display: inline;
+    }
+
+    md-select {
+      display: none;
+    }
   }
 }

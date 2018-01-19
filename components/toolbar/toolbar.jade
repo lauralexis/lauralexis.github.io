@@ -1,11 +1,11 @@
 h1.display-2 Launch 
   span {{activeComponent}}
-md-select.md-no-underline(
-  aria-label='menu', 
-  ng-model='activeComponent', 
-  md-selected-text='activeComponent', 
-  md-on-close='setComponent(activeComponent)')
-  md-option(
-    ng-value='component.title', 
-    ng-repeat='component in components', 
-    md-ink-ripple='false') {{component.title}}
+  md-select.md-no-underline(
+    aria-label='menu', 
+    ng-model='activeComponent', 
+    md-selected-text='activeComponent', 
+    md-on-close='setComponent(activeComponent)')
+    md-option(
+      ng-value='component.title', 
+      ng-repeat='component in components', 
+      md-ink-ripple='false') {{component.title}}

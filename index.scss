@@ -21,17 +21,10 @@ html,
 body {
   background-color: gray-1();
   margin: 0;
-
-  div { box-sizing: border-box; }
+  padding: 0 10px;
 }
 
-.styleguide {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-
-  padding: 0 10px;
-
+body {
   @include MQ(M) {
     padding: 0 25px 25px;
   }
@@ -40,51 +33,55 @@ body {
     padding: 0 50px 50px;
   }
 
-
-  .component {
-    width: 100%;
-
-    > section {
-      @include card;
-      height: 100%;
-      margin-bottom: 20px;
-    }
-
-    @include MQ(M) {
-      width: calc(100% - 300px);
-      margin-right: 50px;
-    }
-
-    .module-header {
-      display: flex;
-      align-items: center;
-      height: 65px;
-      border-bottom: border();
-      justify-content: space-between;
-
-      &.no-border {
-        border-bottom: border-transparent();
-      }
-
-      h2 {
-        padding-left: 25px;
-      }
-    }
-
-    .module-body {
-      padding: 25px;
-
-      > p {
-        margin: 25px 0 10px;
-      }
-
-      > p:first-child {
-        margin-top: 0;
-      }
-    }
-
-  }
+  div { box-sizing: border-box; }
 }
+
+
+
+.component {
+  width: 100%;
+
+  > section {
+    @include card;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  @include MQ(M) {
+    width: calc(100% - 300px);
+    margin-right: 50px;
+  }
+
+  .module-header {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    border-bottom: border();
+    justify-content: space-between;
+
+    &.no-border {
+      border-bottom: border-transparent();
+    }
+
+    h2 {
+      padding-left: 25px;
+    }
+  }
+
+  .module-body {
+    padding: 25px;
+
+    > p {
+      margin: 25px 0 10px;
+    }
+
+    > p:first-child {
+      margin-top: 0;
+    }
+  }
+
+}
+
 
 pre {
   border: 0;
