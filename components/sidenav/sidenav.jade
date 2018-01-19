@@ -1,0 +1,5 @@
+nav
+  .menu-item(
+    ng-repeat='component in components', 
+    ng-click='setComponent(component.title)', 
+    ng-class="{'selected': component.title == activeComponent}")  {{component.title}}
