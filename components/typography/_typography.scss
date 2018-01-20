@@ -1,17 +1,17 @@
-@function prox-family() { @return 'proxima-nova', 'Proxima Nova', sans-serif; }
+@function font-family() { @return 'Montserrat', sans-serif; }
 
-@mixin prox($weight: 400, $size: 16px, $line-height: $size) {
+@mixin text($weight: 400, $size: 16px, $line-height: $size) {
   @if unitless($size) { $size: $size + px; }
   @if unitless($line-height) { $line-height: $line-height + px; }
 
-  font-family: prox-family();
+  font-family: font-family();
   font-size: $size;
   font-weight: $weight;
   line-height: $line-height;
 }
 
-@mixin prox-cap($size: 12px, $line-height: $size, $weight: 600) {
-  @include prox($weight, $size, $line-height);
+@mixin text-cap($size: 12px, $line-height: $size, $weight: 600) {
+  @include text($weight, $size, $line-height);
   letter-spacing: $size / 24 + 1;
   text-transform: uppercase;
 }

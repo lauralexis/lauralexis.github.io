@@ -3,12 +3,13 @@
 h1 {
   padding-left: 10px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.25px;
 
   > span {
     display: none;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: none;
+    letter-spacing: none;
   }
 
   md-select {

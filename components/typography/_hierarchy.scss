@@ -1,12 +1,12 @@
 @mixin display-1 {
-  @include prox(
-    $weight: 300,
+  @include text(
+    $weight: 200,
     $size: 36px,
     $line-height: 48px
   );
 
   small {
-    @include prox(
+    @include text(
       $weight: 400,
       $size: 18px,
       $line-height: 48px
@@ -15,15 +15,15 @@
 }
 
 @mixin display-2 {
-  @include prox(
-    $weight: 300,
+  @include text(
+    $weight: 200,
     $size: 22px,
     $line-height: 29px
   );
 
   @include MQ(M) {
-    @include prox(
-      $weight: 300,
+    @include text(
+      $weight: 200,
       $size: 32px,
       $line-height: 42px
     );
@@ -31,21 +31,21 @@
 }
 
 @mixin display-3 {
-  @include prox-cap(
+  @include text-cap(
     $size: 22px,
     $line-height: 29px
   );
 }
 
 @mixin display-4 {
-  @include prox-cap(
+  @include text-cap(
     $size: 12px,
     $line-height: 18px
   );
 }
 
 @mixin header-1 {
-  @include prox(
+  @include text(
     $weight: 600,
     $size: 30px,
     $line-height: 40px
@@ -53,7 +53,7 @@
 }
 
 @mixin header-2 {
-  @include prox(
+  @include text(
     $weight: 600,
     $size: 22px,
     $line-height: 29px
@@ -61,7 +61,7 @@
 }
 
 @mixin header-3 {
-  @include prox(
+  @include text(
     $weight: 600,
     $size: 18px,
     $line-height: 26px
@@ -69,28 +69,28 @@
 }
 
 @mixin paragraph {
-  @include prox(
+  @include text(
     $size: 18px,
     $line-height: 26px
   );
 }
 
 @mixin paragraph-md {
-  @include prox(
+  @include text(
     $size: 16px,
     $line-height: 23px
   );
 }
 
 @mixin paragraph-sm {
-  @include prox(
+  @include text(
     $size: 15px,
     $line-height: 22.5px
   );
 }
 
 @mixin paragraph-xs {
-  @include prox(
+  @include text(
     $size: 14px,
     $line-height: 20px
   );
@@ -98,14 +98,14 @@
 }
 
 @mixin action-1 {
-  @include prox-cap(
+  @include text-cap(
     $size: 14px
   );
   @include link;
 }
 
 @mixin action-2 {
-  @include prox-cap(
+  @include text-cap(
     $size: 12px
   );
   @include link;
