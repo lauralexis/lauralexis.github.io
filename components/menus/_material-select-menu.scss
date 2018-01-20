@@ -12,24 +12,17 @@ md-select {
   }
 }
 
-.md-select-value {
-  > span:not(.md-select-icon) {
-    flex-grow: 0;
-  }
-}
-
 md-select-menu {
-  border-radius: 5px;
   box-shadow: shadow-menu();
-  background: white();
+  background-color: white();
 
   md-content {
-    margin: 8px;
+    margin: 8px 0;
 
     md-option {
       @include paragraph;
       height: 40px;
-      border-radius: 5px;
+      margin: 0 8px;
 
       &:not([disabled]):hover,
       &:not([disabled]):focus {
@@ -59,9 +52,5 @@ md-select-menu {
     height: 35px;
     border-radius: 35 / 2 + px;
     text-align: center;
-
-    &::after {
-      font-size: 18px;
-    }
   }
 }
