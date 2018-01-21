@@ -11,3 +11,19 @@
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes enterFromBelow{
+  0% {
+    opacity: 0;
+    transform: translateY(3%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@function enter-from-below($duration: 700ms, $delay: 150ms) {
+  @return enterFromBelow $duration smooth() $delay both;
+}

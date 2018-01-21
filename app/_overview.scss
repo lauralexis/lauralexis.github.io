@@ -1,9 +1,10 @@
 #introduction {
-  display: flex;
-  align-items: flex-start;
   max-width: 1020px;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 1em auto;
+
+  @include MQ(M) {
+    margin-top: 15vh;
+  }
 
   .img,
   img {
@@ -11,11 +12,13 @@
     max-width: 420px;
     height: 280px;
     box-shadow: shadow-1();
+    animation: enter-from-below();
     background: white();
   }
 
   .content {
     max-width: 100%;
+    animation: enter-from-below();
     margin-top: 2em;
   }
 }
