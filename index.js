@@ -12,8 +12,8 @@ angular.module('styleguide', [
 
 .config( ($routeProvider) => {
   $routeProvider
-    .when('/styleguide', {
-      title: 'Styleguide',
+    .when('/', {
+      title: 'Portfolio',
       template: require('./app/overview.jade')
     })
     .when('/avatar', {
@@ -74,7 +74,7 @@ angular.module('styleguide', [
       template: require('./app/typography.jade')
     })
     .otherwise({
-      redirectTo: "/styleguide"
+      redirectTo: "/"
     });
 })
 .directive('toolbar', require('./components/toolbar/toolbar.js'))
