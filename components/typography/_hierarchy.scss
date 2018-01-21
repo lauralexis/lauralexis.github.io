@@ -24,8 +24,8 @@
   @include MQ(M) {
     @include text(
       $weight: 200,
-      $size: 32px,
-      $line-height: 42px
+      $size: 22px,
+      $line-height: 29px
     );
   }
 }

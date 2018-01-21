@@ -1,9 +1,9 @@
 #introduction {
   max-width: 1020px;
-  margin: 1em auto;
+  margin: 2em auto;
 
   @include MQ(M) {
-    margin-top: 15vh;
+    margin: 15vh auto;
   }
 
   .img,
@@ -21,4 +21,14 @@
     animation: enter-from-below();
     margin-top: 2em;
   }
+}
+
+#components {
+  max-width: 1020px;
+  margin: 2em auto;
+
+  h2 {
+    text-align: center;
+  }
+
 }

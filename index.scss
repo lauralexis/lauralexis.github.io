@@ -22,10 +22,13 @@ html,
 body {
   background-color: gray-1();
   margin: 0;
-  padding: 0 10px;
+  * { box-sizing: border-box; }
 }
 
 body {
+  width: 100%;
+  padding: 0 10px;
+
   @include MQ(M) {
     padding: 0 25px 25px;
   }
@@ -33,8 +36,6 @@ body {
   @include MQ(L) {
     padding: 0 50px 50px;
   }
-
-  div { box-sizing: border-box; }
 }
 
 .wrap {
