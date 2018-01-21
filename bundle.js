@@ -78410,7 +78410,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<toolbar></toolbar><section id=\"introduction\"><div class=\"img\"></div><div class=\"content\"><h1 class=\"display-3\">Interaction Developer / Designer</h1><p>Front-end engineer with a strong understanding of and appreciation for UI design and usability.  \nFocused on bringing microinteractions and fluidity to experiences which are both beautiful and simple. \nConsiderate of how designs transform between desktop and mobile web, with a clear understanding of adaptive and responsive principles.</p></div></section><section id=\"components\"><h2>Collection of patterns and UI components</h2></section>");;return buf.join("");
+buf.push("<toolbar></toolbar><section id=\"introduction\"><div class=\"img\"></div><div class=\"content\"><h1 class=\"display-3\">Interaction Developer / Designer</h1><p>Front-end engineer with a strong understanding of and appreciation for UI design and usability.  \nFocused on bringing microinteractions and fluidity to experiences which are both beautiful and simple. \nConsiderate of how designs transform between desktop and mobile web, with a clear understanding of adaptive and responsive principles.</p></div></section><section id=\"components\"><h2>Collection of patterns and UI components</h2><div class=\"cards\"> <div ng-repeat=\"i in [1, 2, 3, 4, 5, 6]\" class=\"card\"><h3>Title</h3><p class=\"text-md\">Description</p><a href=\"#\" class=\"action-2\">Link</a></div></div></section>");;return buf.join("");
 }
 
 /***/ }),
